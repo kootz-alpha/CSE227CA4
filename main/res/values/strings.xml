@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Alpha Trade</string>
+    <string name="open">Drawer Opened</string>
+    <string name="close">Drawer Closed</string>
+</resources>

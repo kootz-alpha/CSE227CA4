@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple"
+    tools:context=".SignInPage">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#141414"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="20dp"
+        android:background="@drawable/bg_dark_curved"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/click_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/default_user"
+            android:layout_gravity="center_horizontal"
+            app:shapeAppearanceOverlay="@style/circular"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_inputs"
+            android:drawableLeft="@drawable/ic_name"
+            android:drawablePadding="8dp"
+            android:paddingEnd="16dp"
+            android:hint="Name: "
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_inputs"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="8dp"
+            android:paddingEnd="16dp"
+            android:hint="Email ID: "
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/etUName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_inputs"
+            android:drawableLeft="@drawable/ic_uname"
+            android:drawablePadding="8dp"
+            android:paddingEnd="16dp"
+            android:hint="Username: "
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_inputs"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="8dp"
+            android:paddingEnd="16dp"
+            android:hint="Password: "
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp" />
+
+        <Switch
+            android:id="@+id/camera_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Profile Picture"
+            android:thumbTint="@color/colorSecondary"
+            android:trackTint="@color/colorSecondary"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_buttons"
+            android:onClick="signUp"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginVertical="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:transitionName="logo"
+        app:srcCompat="@drawable/logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
